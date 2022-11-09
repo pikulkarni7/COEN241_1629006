@@ -1,0 +1,45 @@
+1. What is the command to invoke the slack-request function (4 pts)?
+a. Via Curl
+	curl -d http://127.0.0.1:8080/function/slack-request
+
+	
+b. Via faas-cli
+	faas-cli invoke slack-request
+
+---
+
+2. What is the output you see when you invoke the slack-request function? (2 pts)
+	Ouptut is seen in screenshots presented in the other document.
+
+
+---
+
+
+3. What is the command to invoke the slack-interactive function? (4 pts)
+a. Via curl
+	 curl -d http://127.0.0.1:8080/function/slack-interactive
+b. Via faas-cli
+	 faas-cli invoke slack-interactive
+
+
+---
+
+4. What is the output you see when you invoke the slack-interactive function? (2 pts)
+	Ouptut is seen in screenshots presented in the other document.
+
+---
+
+5. How would you pass different arguments to the functions? (4 pts)
+	Arguments can be passed alongwith faas-cli or curl commands while invoking a deployed function.
+	
+	Below are examples where arguments are passed to the functions:
+	curl -d ‘{“Sample”: “Argument”}’ http://127.0.0.1:8080/function/slack-interactive
+	
+	echo “Sample Argument” | faas-cli invoke figlet
+	
+---
+
+6. How would you change the slack-interactive function to react to different inputs? (4 pts)
+
+We can use various Python libraries to translate a given string into a desired type. For example, urllib can be used to translate a string into a URL. json.loads() can be used to translate a JSON string to a Python 
+dict. This way, we can modify the input into a desired argument type for our function.
